@@ -1,0 +1,7 @@
+docker pull postgres
+
+docker run --name postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres@123 -p 5432:5432 -v /home/centos/docker/postgresql/data:/var/lib/postgresql/data -d postgres
+
+docker pull dpage/pgadmin4:latest
+
+docker run --name pgadmin -p 82:80 -e 'PGADMIN_DEFAULT_EMAIL=devopsbalaji506@gmail.com' -e 'PGADMIN_DEFAULT_PASSWORD=postgresmaster'-d dpage/pgadmin4
